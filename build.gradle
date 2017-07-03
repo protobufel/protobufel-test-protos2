@@ -134,6 +134,10 @@ jar {
         attributes('Implementation-Title': project.name,
                 'Implementation-Version': project.version)
     }
+    with copySpec {
+        from 'src/main/protoc/resources'
+        into '/'
+    }
 }
 
 repositories {
